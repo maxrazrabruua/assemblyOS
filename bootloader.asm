@@ -4,15 +4,15 @@ start:
 xor ax,ax
 mov ds,ax
 mov es,ax
-mov si,msg
 call l
 mov ax, 0x8000
 mov ds, ax
 jmp 0x8000:0000
 l:
+mov ax, 0x8000
 mov ah,0x02
 mov dl,0x80
-mov es,0x8000
+mov es,ax
 mov cx,12
 mov bx,2
 call r
