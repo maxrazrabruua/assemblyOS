@@ -11,7 +11,7 @@ mov ah,0x02
 mov dl,0x80
 mov es,0x8000
 mov cx,10
-mov bx,1
+mov bx,2
 call r
 r:
 mov al,0x01
