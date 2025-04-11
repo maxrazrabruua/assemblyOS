@@ -10,7 +10,7 @@ l:
 mov ah,0x02
 mov dl,0x80
 mov es,0x8000
-mov cx,10
+mov cx,12
 mov bx,2
 call r
 r:
