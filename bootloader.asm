@@ -28,6 +28,16 @@ ret
 e:
 mov si,i
 call p
+p:
+mov ah,0x0E
+.n:
+lodsb
+cmp al,0
+je .d
+int 0x10
+jmp .n
+.d:
+ret
 i db "BE: 0",0
 times 510-($-$$) db 0
 dw 0xAA55
