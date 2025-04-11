@@ -37,7 +37,7 @@ p:
  je .d
  int 0x10
  jmp .n
-.d
+.d:
  ret
 
 i db "BE: 0",0
