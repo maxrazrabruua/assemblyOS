@@ -17,7 +17,7 @@ r:
 mov al,0x01
 mov ch,0
 mov cl,bl
-mov dn,0
+mov dh,0
 mov di,0
 int 0x13
 jc e
