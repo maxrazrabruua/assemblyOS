@@ -5,14 +5,12 @@ xor ax,ax
 mov ds,ax
 mov es,ax
 call l
-mov ax, 0x8000
-mov ds, ax
+mov ax,0x8000
 jmp 0x8000:0000
 l:
-mov ax, 0x8000
+mov ax,0x8000
 mov ah,0x02
 mov dl,0x80
-mov es,ax
 mov cx,12
 mov bx,2
 call r
@@ -24,17 +22,8 @@ mov dh,0
 mov di,0
 int 0x13
 jc e
-add bx,1
+inc bx
 loop r
-p:
-mov ah,0x0E
-.n:
-lodsb
-cmp al,0
-je .d
-int 0x10
-jmp .n
-.d:
 ret
 e:
 mov si,i
