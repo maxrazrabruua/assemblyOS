@@ -10,7 +10,7 @@ print:
 .next:
     lodsb
     cmp al,0
-    je .d
+    je .done
     int 0x10
     jmp .next
 .done:
